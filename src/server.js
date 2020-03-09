@@ -17,4 +17,6 @@ const handleListening = () => {
   console.log(`✅  Server Running on PORT: ${PORT}`);
 };
 
-app.listen(PORT, handleListening);
+const server = app.listen(PORT, handleListening);
+
+const io = socketIO(server);
